@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Portfolio</title>
+  <style>
+
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-image: url(OIP.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #333;
+      color:bisque;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    nav {
+      background-color:transparent;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color:transparent;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    p {
+        color: beige;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+    .class{
+      color: bisque;
+      font-family:'Times New Roman', Times, serif
+
+    }
+    h2{
+      color:bisque;
+    }
+    h1{
+      color:bisque;
+    }
+    .logo{
+      position: relative;
+      top: 40px; 
+      left: 100px; 
+    }
+
+    
+    .nav a:active{
+      background-color: #04AA6D;
+
+    }
+    .nav a:hover{
+      background-color:rgb(88, 150, 249);
+    }
+
+    button {
+      position: absolute;
+      bottom: 80px; /* Adjust distance from the bottom */
+      right: 100px; /* Adjust distance from the right */
+      padding: 12px 35px;
+      background: #2a2656;
+      font-size: 17px;
+      font-weight: 500;
+      color: #f6f0f0;
+      border: 3px solid #120c08;
+      border-radius: 8px;
+      box-shadow: 0 0 0 #7bc0f18c;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    
+
+
+    .star-1 {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 25px;
+      height: auto;
+      filter: drop-shadow(0 0 0 #fffdef);
+      z-index: -5;
+      transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+    }
+
+    .star-2 {
+      position: absolute;
+      top: 45%;
+      left: 45%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 0 #fffdef);
+      z-index: -5;
+      transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+
+    .star-3 {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 0 #fffdef);
+      z-index: -5;
+      transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+
+    .star-4 {
+      position: absolute;
+      top: 20%;
+      left: 40%;
+      width: 8px;
+      height: auto;
+      filter: drop-shadow(0 0 0 #fffdef);
+      z-index: -5;
+      transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+
+    .star-5 {
+      position: absolute;
+      top: 25%;
+      left: 45%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 0 #fffdef);
+      z-index: -5;
+      transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+    }
+
+    .star-6 {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 0 #fffdef);
+      z-index: -5;
+      transition: all 0.8s ease;
+    }
+
+    button:hover {
+      background: transparent;
+      color: #fec195;
+      box-shadow: 0 0 25px #fec1958c;
+    }
+
+    button:hover .star-1 {
+      position: absolute;
+      top: -80%;
+      left: -30%;
+      width: 25px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    button:hover .star-2 {
+      position: absolute;
+      top: -25%;
+      left: 10%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    button:hover .star-3 {
+      position: absolute;
+      top: 55%;
+      left: 25%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    button:hover .star-4 {
+      position: absolute;
+      top: 30%;
+      left: 80%;
+      width: 8px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    button:hover .star-5 {
+      position: absolute;
+      top: 25%;
+      left: 115%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    button:hover .star-6 {
+      position: absolute;
+      top: 5%;
+      left: 60%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .fil0 {
+      fill: #fffdef;
+    }
+
+
+  </style>
+  <style>
+    .h3{
+      color: bisque;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+    }
+    .container1 {
+      display: flex;
+      justify-content: center; /* horizontally center content */
+      align-items: center; /* vertically center content */
+      height: 100vh; /* make container full height of viewport */
+    }
+
+  </style>
+
+
+  <style>
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      display: block;
+      background-color: #008000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #005400;
+    }
+    label{
+      color: #fec195;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My Webpage</h1>
+  </header>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="Portfolio1.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    
+  </nav>
+  <section id="home">
+  <div class="logo">
+    <img src="profile.jpg" alt="profile photo" style="height: 200px; width: 200px;">
+</div>
+<button id="resume" >Resume
+  <div class="star-1">
+    <svg
+     
+      xml:space="preserve"
+      version="1.1"
+      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+      viewBox="0 0 784.11 815.53"
+      
+    >
+      <defs></defs>
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+        <path
+          class="fil0"
+          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div class="star-2">
+    <svg
+    
+      xml:space="preserve"
+      version="1.1"
+      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+      viewBox="0 0 784.11 815.53"
+      
+    >
+      <defs></defs>
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+        <path
+          class="fil0"
+          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div class="star-3">
+    <svg
+      
+      xml:space="preserve"
+      version="1.1"
+      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+      viewBox="0 0 784.11 815.53"
+      
+    >
+      <defs></defs>
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+        <path
+          class="fil0"
+          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div class="star-4">
+    <svg
+     
+      xml:space="preserve"
+      version="1.1"
+      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+      viewBox="0 0 784.11 815.53"
+      
+    >
+      <defs></defs>
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+        <path
+          class="fil0"
+          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div class="star-5">
+    <svg
+     
+      xml:space="preserve"
+      version="1.1"
+      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+      viewBox="0 0 784.11 815.53"
+      
+    >
+      <defs></defs>
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+        <path
+          class="fil0"
+          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+        ></path>
+      </g>
+    </svg>
+  </div>
+  <div class="star-6">
+    <svg
+      
+      xml:space="preserve"
+      version="1.1"
+      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+      viewBox="0 0 784.11 815.53"
+      
+    >
+      <defs></defs>
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+        <path
+          class="fil0"
+          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+        ></path>
+      </g>
+    </svg>
+  </div>
+</button>
+
+  <main>
+    <h1 class="class">I'm JAYCE IVERSON QUENITA</h1>
+    <h2>a Web Designer!</h2>
+    <p>
+     
+    </p>
+  </main>
+
+  <footer>
+    <p>Contact us at: iverson5@gmail.com</p>
+  </footer>
+
+  <script>
+    document.getElementById("resume").addEventListener("click", function() {
+  window.location.href = "https://www.bing.com/images/search?view=detailV2&ccid=glWTCVTg&id=62538BFE9E52D8D250D5B88D9B07F5F21E127B09&thid=OIP.glWTCVTgjBcCa1xM4QYhvQHaEc&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8255930954e08c17026b5c4ce10621bd%3frik%3dCXsSHvL1B5uNuA%26riu%3dhttp%253a%252f%252felmundopequeno.files.wordpress.com%252f2011%252f02%252f50-percent-off.jpg%26ehk%3dP2oW7r%252b4JRYYOBNzpaa9%252b%252b9nhVAhNEaAE5h3FNKHwFg%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1200&expw=2000&q=50%25+picture&simid=607986813666794095&FORM=IRPRST&ck=9B0C24EAD554B9A9DB25947E1BB6ED0C&selectedIndex=29&itb=0";
+  });
+  </script>
+  </section>
+  
+  
+  
+  
+  
+  
+  <section id="about">
+    <div class="container">
+      
+    </div>
+    <div class="container1">
+    <main>
+      <h1>ABout Me</h1>
+      <h2 class="h2">My name is JAYCE IVERSON QUENITA</h2>
+  
+      <h3 class="h3">and I'm a Web Developer!</h3>
+      <p>
+        As a budding web designer entering my third year of college, I'm diving deeper into the world of coding and design.
+         Each line of code I write feels like a brushstroke on a canvas, shaping the digital landscapes I envision.
+        With every project, I strive to blend creativity with functionality, crafting websites that not only catch the eye but also engage and delight users. Though I may still be a beginner, 
+        each hurdle I overcome and lesson I learn brings me closer to mastering my craft. The journey ahead is both exciting and challenging, but I'm eager to continue honing my skills and making my mark in the ever-evolving realm of web design.
+      </p>
+    </main>
+  </div>
+  
+  </section>
+  
+
+  <section id="portfolio">
+  <main>
+    <h1>Portfolio</h1>
+    <div class="service">
+      <div class="service-icon">
+        
+      </div>
+      <img src="calculator.jpg" alt="profile photo" style="height: 200px; width: 200px; border-radius: 10px; ">
+      <div class="service-info">
+        <div class="service-title">Calculator</div>
+        
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-icon">
+        
+     
+      </div>
+      
+      <!-- <button class="button2">Source Code</button> -->
+
+      <img src="todo.png" alt="profile photo" style="height: 200px; width: 200px; border-radius: 10px; ">
+      
+      <div class="service-info">
+        <div class="service-title">Todo_List</div>
+        <div class="service-description">
+
+        
+         
+       
+       
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <p>Contact us at: iverson5@gmail.com</p>
+  </footer>
+
+
+
+  <section>
+    <h1>Contact Us</h1>
+    <main>
+      <div class="contact-form">
+        <form action="#" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+  
+          
+        </form>
+      </div>
+    </main>
+  
+  </section>
+</body>
+
+</html>

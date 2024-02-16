@@ -1,0 +1,209 @@
+!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmouseover Attribute</h2>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+<script>
+    function mOver(obj) {
+      obj.innerHTML = "Thank You"
+    }
+    function mOut(obj) {
+      obj.innerHTML = "Mouse Over Me"
+
+    }
+</script>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmousedown Attribute</h2>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Releasev Me";
+}
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+
+
+</script>
+<button>button</button>
+    </body>
+    </html>
+    <a href="/your-view-url" class="button">View</a>
+    <style>button {
+      position: absolute;
+      bottom: 20px; /* Adjust distance from the bottom */
+      right: 20px; /* Adjust distance from the right */
+      padding: 12px 35px;
+      background: #2a2656;
+      font-size: 17px;
+      font-weight: 500;
+      color: #f6f0f0;
+      border: 3px solid #120c08;
+      border-radius: 8px;
+      box-shadow: 0 0 0 #7bc0f18c;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }</style>
+    button {
+      position: absolute;
+      bottom: 20px; /* Adjust distance from the bottom */
+      right: 20px; /* Adjust distance from the right */
+      padding: 12px 35px;
+      background: #2a2656;
+      font-size: 17px;
+      font-weight: 500;
+      color: #f6f0f0;
+      border: 3px solid #120c08;
+      border-radius: 8px;
+      box-shadow: 0 0 0 #7bc0f18c;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    <a href="https://www.example.com" class="button">Click me!</a>
+And you can style it as a button using CSS:
+
+css
+Copy code
+.button {
+  display: inline-block;
+  padding: 12px 35px;
+  background: #2a2656;
+  font-size: 17px;
+  font-weight: 500;
+  color: #f6f0f0;
+  border: 3px solid #120c08;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #7bc0f18c;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none; /* Remove default underline */
+}
+
+.button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="https://www.example.com" class="button">Click me!</a>
+And you can style it as a button using CSS:
+<style>
+
+css
+Copy code
+.button {
+  display: inline-block;
+  padding: 12px 35px;
+  background: #2a2656;
+  font-size: 17px;
+  font-weight: 500;
+  color: #f6f0f0;
+  border: 3px solid #120c08;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #7bc0f18c;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none; /* Remove default underline */
+}
+
+.button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+</style>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Page</title>
+    <style>
+        /* CSS styles for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #home {
+            background-color: #f0f0f0;
+        }
+        #about {
+            background-color: #e0e0e0;
+        }
+        #contact {
+            background-color: #d0d0d0;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the content of the home page.</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>This is the content of the about page.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>This is the content of the contact page.</p>
+    </section>
+</body>
+</html>
+</body>
+</html>
