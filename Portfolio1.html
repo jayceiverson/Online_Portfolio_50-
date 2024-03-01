@@ -122,22 +122,28 @@ button span {
 }
 
 button:hover span {
- background: none;
+ background: rgb(64, 200, 246);
 }
 
 button:active {
  transform: scale(0.9);
 }
+.button:hover {
+ background:rgb(64, 200, 246);
 .button{
   position: absolute;
   top: 200px;
   left: 400px;
+}
+.button1:hover {
+ background:rgb(64, 200, 246);
 }
 .button1{
   position: absolute;
   top: 420px;
   left: 400px;
 }
+
 .button2{
   position: absolute;
   top: 600px;
@@ -207,6 +213,15 @@ button:active {
   <footer>
     <p>Contact us at: iverson5@gmail.com</p>
   </footer>
+<script>
+    document.getElementById("button").addEventListener("click", function() {
+  window.location.href = "https://jayceiverson.github.io/Working-Calculator/";
+  });
+
+  document.getElementById("button1").addEventListener("click", function() {
+  window.location.href = "https://jayceiverson.github.io/Todo-list-app/";
+  });
+<script>
 </body>
 
 </html>
